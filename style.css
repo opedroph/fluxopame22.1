@@ -29,12 +29,11 @@ body{
     /* border: 1px solid red; */
     width: 70%;
     height: 100%;
-    margin-top: 8px;
+    margin-top: 8px 0px;
     border-radius: 8px 8px 0px 0px;
     display: flex;
     flex-direction: column;
-    overflow: hidden; 
-    flex-wrap: wrap; 
+    overflow-x: hidden; 
 }
 
 .containerTop{
@@ -89,18 +88,19 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
 
-.logo > img{
-    /*mesmo nao sendo o objetivo, tentei arrumar o problema da logo ir para trás do botao ao diminuir a janela do 
-      navegador, porém sem sucesso */
-    position: absolute;
+.logo{
+    background-image: url(imgs/LogoFluxo.png);
+    background-position: center;
+    background-size: cover;
     width: 30%;
-    min-width: 100px;
-    left: 1%;
-    bottom:8%
+    height: 30%;
+    min-width: 210px;
+    min-height: 100px;
 }
 
 
@@ -238,3 +238,17 @@ body{
     gap: 10px;
 }
 
+
+@media screen and (max-width:500px)
+{
+    .mainContainer{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:280px)
+{
+    .mainContainer{
+        width: 100%;
+    }
+}
